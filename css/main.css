@@ -210,6 +210,10 @@ main {
       background: #aa920d;
       padding: 0%; }
 
+.iconsPlus {
+  display: inline-block;
+  vertical-align: middle; }
+
 .hobby {
   margin-top: 16px;
   text-align: center !important;

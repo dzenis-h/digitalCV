@@ -10,6 +10,7 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="videoPopup/src/video.popup.css">
   <link rel="stylesheet" type="text/css" href="lightcase/src/css/lightcase.css">
 
   <title>View My Work</title>
@@ -82,7 +83,7 @@
       </div>
         
         <div class="bio2">
-            <h3 class="text-secondary">This is my last and the proudest project</h3>
+            <h3 class="text-secondary">This is my latest and the proudest project:</h3>
 
             <p>This is a EMS software - [Employee management system] that can help companies reduce 
                 their time spent on salaries, penalties, bonuses and a lot of other things regarding
@@ -102,15 +103,27 @@
                     <li>jQuery & Lodash (<i>as helper libraries</i>)</li>
                     <li> ... and so much more </li>
                   </ul>
+                      <p class="text-secondary square plus">In order to test it please feel free to download the instructions, or you can watch the video</p>
+
                 <div class="icons">
-                  <p class="text-secondary">In order to use it please feel free to download the instructions:</p>
-                  <a href="./dox/Local_Setup.docx" style="margin-left: 1.5rem" download>
-                    <i class="fab fa fa-cloud fa-2x"></i> Download instructions
-                  </a>
-                  </div>      
-            <hr>
-            <h3 class="text-secondary">Some of my other apps, including the very first one:</h3>
-        </div>
+                  
+                  <a href="./dox/Local_Setup.docx" class="iconsPlus" style="padding-left: 2rem;" download>
+                    <i class="fas fa-download fa-2x" 
+                       style="margin-right: 0.5rem;">
+                    </i> Download instructions</a>
+                    
+
+                  <a id="video" video-url="https://www.youtube.com/watch?v=5pUm2DWUgPM&t=16s"
+                   class="iconsPlus"><i class="fab fa-youtube fa-2x"
+                  style="margin-right: 0.5rem;"></i>Watch Live Preview</a>                    
+                
+                </div>
+                  <div class="hobby">
+                <hr>                    
+                   <h3 class="text-secondary">Some of my other apps, including the very first one:</h3>                    
+                  </div>
+                  
+            </div>
 
             <div class="works job-1">
                 <div class="mainOne">
@@ -181,8 +194,9 @@
                   </a>
               </div>
               <hr>
-              I work super hard every day, and I'm somewhat proud of my progress, but I'm just getting started.              <div class="icons">
-                  <a href="./contact.html"> 
+              I work super hard every day, and I'm somewhat proud of my progress, but I'm just getting started.              
+              <div class="icons">
+                  <a href="./contact.html" class=""> 
                     <i class="fas fa-mobile-alt fa-2x" style="padding-left: 2rem;" ></i> <b style="margin-left: 1rem;">
                       Let's build together</b> 
                   </a>
@@ -191,7 +205,7 @@
               
                   <div class="works job-5 yellow">
                       <div class="mainOne">
-                          <div class="item">
+                          <!-- <div class="iconsPlus"> -->
                               <a href="img/projects/p4.png" data-rel="lightcase">
                                 <img src="img/projects/p4.png" alt="Web-To-Do">
                               </a>
@@ -202,12 +216,12 @@
                                 <i class="fab fa-github"></i> Github repo
                               </a>
                             <!-- <p style="text-align: center; letter-spacing: 4px;" class="yellow"><b>Bigga File Uploads</b><br> Simple 2 Way Data Transfer.</p> -->
-                            </div>
+                            <!-- </div> -->
                           </div>
                         </div>          
-            </div>
-
-      </main>
+                    </div>
+                  </div>
+          </main>
 
   <footer id="main-footer">
     Dzenis H. - Digital CV - Copyright &copy; 2018
@@ -218,11 +232,21 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="lightcase/src/js/lightcase.js"></script>
 
+  <!-- <script src="//code.jquery.com/jquery-3.2.1.min.js"></script> -->
+  <script src="videoPopup/src/video.popup.js"></script>
+
   <script type="text/javascript">
     jQuery(document).ready(function($) {
       $('a[data-rel^=lightcase]').lightcase();
+      $("#video").videoPopup();
     });
+
+
   </script>
+
+
+
+
 </body>
 
 </html>
