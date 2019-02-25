@@ -16,6 +16,11 @@ body {
   line-height: 1.5;
 }
 
+#revLogo {
+  transform: skewX(-20deg);
+  padding-inline-start: 0.2rem;
+}
+
 // Headings
 h1,
 h2,
@@ -76,11 +81,11 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 1rem;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
+    'bioimage bio bio bio'
+    'job1 job2 job3 job4';
+  grid-template-columns: repeat(4, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -119,6 +124,7 @@ main {
     }
   }
 
+
   .job-1 {
     grid-area: job1;
   }
@@ -130,6 +136,20 @@ main {
   .job-3 {
     grid-area: job3;
   }
+
+  .job-4 {
+    grid-area: job4;
+  }
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+  .cols {
+    width: 33%;
+    padding: 0.7rem;
+    }
+}
 
   .job {
     background: lighten($primary-color, 5);
@@ -153,7 +173,7 @@ main {
       padding: 0%;
     }
   }
-}
+
 
 .iconsPlus {
   display: inline-block; 
@@ -245,7 +265,24 @@ main {
   padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 60px;
+  height: 3rem;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#index-footer {
+  @include centerer;
+   small {
+    text-align: center;
+  }
+  height: 1.5rem;
+  text-transform: inherit;
+  margin: auto;
 }
 
 .my-grid {

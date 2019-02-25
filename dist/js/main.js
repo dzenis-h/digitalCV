@@ -31,3 +31,15 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+function strReplace() {
+    htmlContent = menuBtn.innerHTML;
+    textContent = menuBtn.textContent.replace(/\s/g, "");
+    let val = ''
+    if (textContent === 'MORE')  {
+      val = 'Close';
+    } else {
+      val = 'MORE';
+    }
+    return val;
+  };
