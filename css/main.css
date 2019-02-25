@@ -6,19 +6,22 @@
   cursor: pointer;
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
+    width: 2.5rem;
+    height: 0.4rem;
+    line-height: 2rem;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #eece1a;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    color: #FF4747;
+    line-height: 2; }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px); }
+      transform: rotate(-45deg) translate(10px, -9px); }
 
 .menu {
   position: fixed;
@@ -170,6 +173,10 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
 
+#revLogo {
+  transform: skewX(-20deg);
+  padding-inline-start: 0.2rem; }
+
 h1,
 h2,
 h3 {
@@ -250,23 +257,31 @@ main {
     grid-area: job3; }
   .about-info .job-4 {
     grid-area: job4; }
-  .about-info .job {
-    background: #515151;
-    padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
-    .about-info .job ul > li {
-      text-align: left;
-      font-size: 0.9rem; }
-    .about-info .job h3 {
-      text-align: center; }
-    .about-info .job h5 {
-      padding: 1px;
-      margin: 1px; }
-    .about-info .job hr {
-      border: none;
-      height: 2px;
-      background: #aa920d;
-      padding: 0%; }
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between; }
+  .flex-grid-thirds .cols {
+    width: 33%;
+    padding: 0.7rem; }
+
+.job {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #eece1a 5px solid; }
+  .job ul > li {
+    text-align: left;
+    font-size: 0.9rem; }
+  .job h3 {
+    text-align: center; }
+  .job h5 {
+    padding: 1px;
+    margin: 1px; }
+  .job hr {
+    border: none;
+    height: 2px;
+    background: #aa920d;
+    padding: 0%; }
 
 .iconsPlus {
   display: inline-block;
@@ -335,7 +350,18 @@ main {
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
-  height: 60px; }
+  height: 3rem; }
+
+#index-footer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1.5rem;
+  text-transform: inherit;
+  margin: auto; }
+  #index-footer small {
+    text-align: center; }
 
 .my-grid {
   display: grid;
