@@ -4,15 +4,6 @@ $show-home-image: true;
 $home-image: url(../img/background.jpeg);
 $background-opacity: 0.9;
 
-
-// @function str-replace($string, $search, $replace: '') {
-//   $index: str-index($string, $search);
-//   @if $index {
-//     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-//   }
-//   @return $string;
-// }
-
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
@@ -49,7 +40,7 @@ $background-opacity: 0.9;
 
 // Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 612px) {
     @content;
   }
 }

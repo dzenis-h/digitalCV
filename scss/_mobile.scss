@@ -76,15 +76,6 @@
       margin-top: 10vh;
     }
 
-    .xo{
-      padding: 0px;
-    }
-
-    .xsm {
-      font-size: 24px;
-      padding: 0.5rem 1.5rem;
-    }
-
     .lg-heading {
       margin-top:1rem;
       font-size: 5rem;
@@ -93,5 +84,9 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .dox {
+    display: none;
   }
 }

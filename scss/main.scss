@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
   box-sizing: border-box;
@@ -14,11 +13,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-}
-
-#revLogo {
-  transform: skewX(-20deg);
-  padding-inline-start: 0.2rem;
 }
 
 // Headings
@@ -63,10 +57,10 @@ main {
 
     a {
       padding: 0.4rem;
+      @include easeOut;
 
       &:hover {
         color: $secondary-color;
-        @include easeOut();
       }
     }
   }
@@ -79,14 +73,25 @@ main {
   }
 }
 
+.hobby {
+  text-align: center;
+  padding: 0rem 2rem;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+  color: $secondary-color;
+  color: antiquewhite;
+}
+
 .about-info {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio bio bio'
-    'job1 job2 job3 job4'
-    'job5 job6 job7 job8';
-  grid-template-columns: repeat(4, 1fr);
+    'bioimage bio bio'
+    'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -95,118 +100,35 @@ main {
     border: $secondary-color 3px solid;
   }
 
-  .mainOne {
-    display: grid;
-    margin-bottom: 37px;
-
-    img {
-      width: 100%;
-      border: 7px #fff solid;
-  
-      &:hover {
-        opacity: 0.5;
-        border-color: $secondary-color;
-        @include easeOut;
-      }
-    }
-  }
-
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
   }
 
-  .bio2 {
-    grid-area: bio;
-    font-size: 1rem;
-    ul > li {
-      text-align: left;
-      font-size: 0.9rem;
-    }
-  }
-
-
   .job-1 {
     grid-area: job1;
   }
+
   .job-2 {
     grid-area: job2;
   }
+
   .job-3 {
     grid-area: job3;
   }
-  .job-4 {
-    grid-area: job4;
-  }
-  .job-5 {
-    grid-area: job5;
-  }
-  .job-6 {
-    grid-area: job6;
-  }
-  .job-7 {
-    grid-area: job7;
-  }
-  .job-8 {
-    grid-area: job8;
-  }
-}
-
-.flex-grid-thirds {
-  display: flex;
-  justify-content: space-between;
-  .cols {
-    width: 33%;
-    padding: 0.7rem;
-    }
-}
 
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
-    ul > li {
-      text-align: left;
-      font-size: 0.9rem;
-    }
-    h3 {
-      text-align: center;
-    }
-    h5 {
-      padding: 1px;
-      margin: 1px;
-    }
-    hr{
-      border: none;
-      height: 2px;
-      background: darken($secondary-color, 16);
-      padding: 0%;
-    }
   }
-
-
-.iconsPlus {
-  display: inline-block; 
-  vertical-align: middle;
-}
-
-.hobby {
-  margin-top: 16px;
-  text-align: center !important;
-  padding: 0.3rem;
- }
-
-.works {
-  background: lighten($primary-color, 5);
-  border-bottom: $secondary-color 5px solid;
 }
 
 // Work/Projects
 .projects {
-  margin-inline-end: 28px;
   display: grid;
-  grid-gap: 1.9rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(4, 1fr);
 
   img {
     width: 100%;
@@ -275,57 +197,7 @@ main {
   padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
-  height: 3rem;
+  height: 60px;
 }
 
-@mixin centerer {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#index-footer {
-  @include centerer;
-   small {
-    text-align: center;
-  }
-  height: 1.5rem;
-  text-transform: inherit;
-  margin: auto;
-}
-
-.my-grid {
-  display: grid;
-  grid-template-columns: 70% 29%;
-  grid-template-rows: 100%;
-  grid-gap: 10px;
-  margin-top: 21px;
-
-  img {
-    width: 100%;
-    border: 7px #fff solid;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-
-  .plus {     
-    grid-column: 1 / span 2;
-    text-align: center;
-    color: $secondary-color;
-    margin-bottom: 3px;
-    font-size: 1.2rem;
-  }
-
-  .square {
-    color: white;
-    text-align: center;
-  }
-    .red {
-    background-color: #d10c0ccc;      
-  }
-}
+@import 'mobile';
