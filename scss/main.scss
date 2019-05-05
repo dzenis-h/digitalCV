@@ -1,5 +1,7 @@
 @import 'config';
 @import 'menu';
+@import url("./footer.css");
+
 
 * {
   box-sizing: border-box;
@@ -48,6 +50,10 @@ header {
   color: $secondary-color;
 }
 
+.diff-text {
+  color: $other-color;
+}
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
@@ -87,7 +93,7 @@ footer {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 1.6rem;
   grid-template-areas:
     'bioimage bio bio'
     'job1 job2 job3';
