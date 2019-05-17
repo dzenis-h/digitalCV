@@ -1,6 +1,8 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 @import url("./footer.css");
+@import url("./styles.css");
 
 
 * {
@@ -130,7 +132,7 @@ footer {
   }
 }
 
-// Work/Projects
+// Work/ Projects
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -206,4 +208,122 @@ footer {
   height: 60px;
 }
 
-@import 'mobile';
+// Under construction parts
+.coming-soon{
+
+section{
+  height: 100%;
+  display: inline-flexbox;
+  margin: 0 .3rem; // To look nice on mobile
+  text-align: center;
+  padding-bottom: 5rem;
+  align-items: center;
+  h3{
+    font-size: 2rem;
+    font-weight: 100;
+    color: #F44;
+    margin: 0;
+    padding-bottom: .1rem;
+  }
+  h4{
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+  small{
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: 0;
+    color: $text-primary;
+  }
+  a{
+    font-size: 1.4em;
+    font-weight: 300;
+    color:$secondary-color;
+    text-decoration: none;
+    }
+  }
+}
+
+.pointer {
+.chevron {
+  left:35%;
+  right: 65%;
+  position: absolute;
+  color: $secondary-color;
+  width: 28px;
+  height: 8px;
+  margin: .1rem .1rem;
+  padding-bottom: .2rem;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+    }
+  }
+}
