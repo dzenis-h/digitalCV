@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Montez');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+
 $primary-color: #444;
 $secondary-color: #eece1a;
 $other-color: #dbdb30;
+$extra-color: rgba(101, 255, 41, 0.603);
 $show-home-image: true;
 $home-image: url(../img/background.jpeg);
-$background-opacity: 0.9;
+$background-opacity: 0.8;
+$total: 300; // total particles
+$orb-size: 7rem;
+$particle-size: .1rem;
+$time: 13s; 
+$base-hue: 765;
+
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
-@mixin background {
+@mixin background { 
   @if $show-home-image {
     &#bg-img {
       background: $home-image;

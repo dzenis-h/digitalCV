@@ -1,8 +1,6 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 @import url("./footer.css");
-@import url("./styles.css");
 
 
 * {
@@ -54,6 +52,10 @@ header {
 
 .diff-text {
   color: $other-color;
+}
+
+.extra-text {
+  color: $extra-color;
 }
 
 main {
@@ -110,7 +112,7 @@ footer {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .job-1 {
@@ -132,7 +134,7 @@ footer {
   }
 }
 
-// Work/ Projects
+// Work/Projects
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -210,120 +212,237 @@ footer {
 
 // Under construction parts
 .coming-soon{
+  section{
+    height: 100%;
+    display: inline-flexbox;
+    margin: 0 .3rem; // To look nice on mobile
+    text-align: center;
+    padding-bottom: 4rem;
+    align-items: center;
+    h3{
+      font-size: 2rem;
+      font-weight: 100;
+      color: #F44;
+      margin: 0;
+      padding: 0;
+    }
+    h4{
+      font-size: 1.2rem;
+      font-weight: 100;
+      margin-bottom: 0;
+      margin-top: .1rem;
+    }
+    small{
+      font-size: 1em;
+      font-weight: 100;
+      margin-top: 0;
+      color: #ffff;
+    }
+    a{
+      font-size: 1.4em;
+      font-weight: 300;
+      color:$secondary-color;
+      text-decoration: none;
+      }
+    }
+  }
+  
+  .pointer {
+    .chevron {
+      left:35%;
+      right: 65%;
+      position: absolute;
+      color: $secondary-color;
+      width: 28px;
+      height: 8px;
+      margin: .1rem .1rem;
+      padding-bottom: .2rem;
+      opacity: 0;
+      transform: scale3d(0.5, 0.5, 0.5);
+      animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+      }
+    }
+  }
 
-section{
-  height: 100%;
-  display: inline-flexbox;
-  margin: 0 .3rem; // To look nice on mobile
-  text-align: center;
-  padding-bottom: 5rem;
-  align-items: center;
-  h3{
-    font-size: 2rem;
-    font-weight: 100;
-    color: #F44;
-    margin: 0;
-    padding-bottom: .1rem;
+  blockquote{
+    display: block;
+    background: #fff;
+    padding: 1rem 4rem;
+    margin: 0 0 0.1rem;
+    position: relative;
+    
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $primary-color;
+    padding-right: .2rem;
+  
+    /*Borders - (Optional)*/
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-right-style: solid;
+    border-right-width: 2px;    
   }
-  h4{
-    font-size: 1.2em;
-    font-weight: 100;
-    margin-bottom: 0;
-  }
-  small{
-    font-size: 1em;
-    font-weight: 100;
-    margin-top: 0;
-    color: $text-primary;
-  }
-  a{
-    font-size: 1.4em;
-    font-weight: 300;
+  
+  blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+    
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
     color:$secondary-color;
+    
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+    
+  }
+  
+  blockquote::after{
+    /*Reset to make sure*/
+    content: "";
+  }
+  
+  blockquote a{
     text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+  }
+  
+  blockquote a:hover{
+   color: #666;
+  }
+
+
+/*Sunflower Color Palette*/
+.sunflower{
+  @extend blockquote;
+  border-left-color: $other-color;
+  border-right-color: $other-color;
+}
+
+.particles {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 0; 
+    height: 0; 
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: rotate $time infinite linear; // rotate orb
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotateY(360deg) rotateX(360deg);
     }
   }
-}
-
-.pointer {
-.chevron {
-  left:35%;
-  right: 65%;
-  position: absolute;
-  color: $secondary-color;
-  width: 28px;
-  height: 8px;
-  margin: .1rem .1rem;
-  padding-bottom: .2rem;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #fff;
-}
-
-.chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
-}
-
-@keyframes move {
-  25% {
-    opacity: 1;
-
+  
+  .parts {
+    position: absolute;
+    width: $particle-size;
+    height: $particle-size;
+    border-radius: 50%;
+    opacity: 0; 
   }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-}
-
-.text {
-  display: block;
-  margin-top: 75px;
-  margin-left: -30px;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
-}
-
-@keyframes pulse {
-  to {
-    opacity: 1;
+  
+  @for $i from 1 through $total {
+    $z: (random(360) * 1deg); // random angle to rotateZ
+    $y: (random(360) * 1deg); // random to rotateX
+    $hue: ((40/$total * $i) + $base-hue); // set hue
+    
+    .parts:nth-child(#{$i}){ // grab the nth particle
+      animation: orbit#{$i} $time infinite;
+      animation-delay: ($i * .01s); 
+      background-color: hsla($hue, 100%, 50%, 1);
+    }
+  
+    @keyframes orbit#{$i}{ 
+      20% {
+        opacity: 1; // fade in
+      }
+      30% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // form orb
+      }
+      80% {
+        transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z); // hold orb state 30-80
+        opacity: 1; // hold opacity 20-80
+      }
+      100% {
+         transform: rotateZ(-$z) rotateY($y) translateX( ($orb-size * 3) ) rotateZ($z); // translateX * 3
+      }
     }
   }
-}
+
+@import 'mobile';
