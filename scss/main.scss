@@ -26,6 +26,8 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
   }
 
   &.sm-heading {
@@ -99,6 +101,7 @@ main {
 }
 
 .hobby {
+  overflow: hidden;
   text-align: center;
   padding: 0rem 2rem;
 }
@@ -399,7 +402,7 @@ footer {
    color: #666;
   }
 
-
+ 
 /*Sunflower Color Palette*/
 .sunflower{
   @extend blockquote;
@@ -412,7 +415,8 @@ footer {
     top: 50%;
     left: 50%;
     width: 0; 
-    height: 0; 
+    height: 0;
+    // margin-bottom: 5rem;
     transform-style: preserve-3d;
     perspective: 1000px;
     animation: rotate $time infinite linear; // rotate orb
@@ -429,7 +433,7 @@ footer {
     width: $particle-size;
     height: $particle-size;
     border-radius: 50%;
-    opacity: 0; 
+    opacity: 0;
   }
   
   @for $i from 1 through $total {
