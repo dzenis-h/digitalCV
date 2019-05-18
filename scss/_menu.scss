@@ -1,10 +1,10 @@
 // Menu Button
 .menu-btn {
   position: absolute;
+  color: $secondary-color;
   z-index: 3;
   right: 35px;
   top: 35px;
-  color: $secondary-color;
   cursor: pointer;
   @include easeOut;
 
@@ -24,6 +24,7 @@
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: firebrick;
       }
 
       // Line 2 - Hide
@@ -34,9 +35,14 @@
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background: firebrick;
       }
     }
   }
+}
+
+.hide {
+  display: none;
 }
 
 // Menu Overlay

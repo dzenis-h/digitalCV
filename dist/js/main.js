@@ -32,18 +32,6 @@ function toggleMenu() {
   }
 }
 
-function strReplace() {
-  htmlContent = menuBtn.innerHTML;
-  textContent = menuBtn.textContent.replace(/\s/g, "");
-  let val = "";
-  if (textContent === "MORE") {
-    val = "Close";
-  } else {
-    val = "MORE";
-  }
-  return val;
-}
-
 // Cloning divs where particles go in order not to put 300 of them in the markup :)
 const node = document.querySelector(".parts");
 [...Array(300)].forEach(_ =>

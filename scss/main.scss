@@ -58,6 +58,21 @@ header {
   color: $extra-color;
 }
 
+.more {
+  float: right;
+  // padding: .5rem;
+  margin-top: 1.7rem; 
+  color: $other-color;
+
+// TESTING GROUND
+
+}
+
+.menuPlus {
+  padding: 1rem;
+  margin: 1rem;
+}
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
