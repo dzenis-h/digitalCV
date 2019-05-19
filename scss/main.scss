@@ -26,14 +26,14 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
+    margin-top: 1rem;
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+    
   }
 }
 
@@ -62,12 +62,9 @@ header {
 
 .more {
   float: right;
-  // padding: .5rem;
+  padding: .5rem;
   margin-top: 1.7rem; 
   color: $other-color;
-
-// TESTING GROUND
-
 }
 
 .menuPlus {
@@ -76,7 +73,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 2rem;
   min-height: calc(100vh - 60px);
 
   .icons {
@@ -104,13 +101,6 @@ main {
   overflow: hidden;
   text-align: center;
   padding: 0rem 2rem;
-}
-
-footer {
-  text-align: center;
-  margin: auto;
-  color: $secondary-color;
-  color: antiquewhite;
 }
 
 .about-info {
@@ -218,14 +208,6 @@ footer {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
-}
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
-  height: 60px;
 }
 
 // Under construction parts
@@ -416,7 +398,7 @@ footer {
     left: 50%;
     width: 0; 
     height: 0;
-    // margin-bottom: 5rem;
+    margin: 4rem;
     transform-style: preserve-3d;
     perspective: 1000px;
     animation: rotate $time infinite linear; // rotate orb
