@@ -8,10 +8,10 @@ $extra-color: rgba(101, 255, 41, 0.603);
 $show-home-image: true;
 $home-image: url(../img/background.jpeg);
 $background-opacity: 0.8;
-$total: 200; // total particles
-$orb-size: 3rem;
+$total: 300; // total particles
+$orb-size: 5rem;
 $particle-size: .1rem;
-$time: 13s; 
+$time: 18s;
 $base-hue: 765;
 
 
@@ -51,7 +51,7 @@ $base-hue: 765;
 
 // Media Query Mixins
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 612px) {
     @content;
   }
 }

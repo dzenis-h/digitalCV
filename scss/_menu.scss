@@ -6,8 +6,8 @@
   right: 50px;
   top: 40px;
   cursor: pointer;
-  @include easeOut;
-
+  @include easeOut; 
+  
   .btn-line {
     width: 28px;
     height: 3px;
