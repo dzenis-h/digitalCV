@@ -72,11 +72,11 @@
   main {
     padding: 2rem;
     #home h1 {
-      margin-top: 10vh;
+      margin-top: 100vh;
     }
 
     .lg-heading {
-      margin-top:1rem;
+      margin-top:10rem;
       font-size: 5rem;
     }
   }
@@ -87,10 +87,16 @@
 
   .particles {
       padding-top: 4rem;
-      
   }
 
   .dox {
     display: none;
+  }
+}
+
+footer {
+  /*Sunflower Color Palette*/
+footer > p{
+  // text-align: center;
   }
 }
