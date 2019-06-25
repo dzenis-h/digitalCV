@@ -33,7 +33,8 @@ function toggleMenu() {
 }
 
 // Cloning divs where particles go in order not to put 300 of them in the markup :)
-const node = document.querySelector(".parts");
-[...Array(300)].forEach(_ =>
-  node.parentNode.insertBefore(node.cloneNode(true), node)
-);
+
+// const node = document.querySelector(".parts");
+// [...Array(300)].forEach(_ =>
+//   node.parentNode.insertBefore(node.cloneNode(true), node)
+// );
