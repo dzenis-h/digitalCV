@@ -8,7 +8,7 @@
 // Desktops & Laptops
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -91,12 +91,5 @@
 
   .dox {
     display: none;
-  }
-}
-
-footer {
-  /*Sunflower Color Palette*/
-footer > p{
-  // text-align: center;
   }
 }
