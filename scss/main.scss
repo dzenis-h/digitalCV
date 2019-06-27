@@ -32,7 +32,7 @@ h3 {
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
     
   }
@@ -291,6 +291,37 @@ main {
     width: 50%;
     transform: skew(0deg, -30deg);
   }
+
+  .xoxo { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: 100px; 
+  } 
+  
+  .box1 { 
+    grid-column-start: 1; 
+    grid-column-end: 4; 
+    grid-row-start: 1; 
+    grid-row-end: 1; 
+  }
+  
+  
+  * {box-sizing: border-box;}
+  
+  .xoxo {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+  }
+  
+  .xoxo > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+  }
+  
   
   @keyframes move {
     25% {
