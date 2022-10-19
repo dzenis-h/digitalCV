@@ -2,3 +2,4 @@ node_modules
 package-lock
 desktop.ini
 .vscode
+dist/*
