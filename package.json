@@ -10,11 +10,11 @@
   },
   "author": {
     "name": "Dzenis H.",
-    "url": "https://dzenis-h.com"
+    "url": "https://dzenis-h-portfolio.web.app"
   },
   "license": "EULA",
   "dependencies": {
     "gh-pages": "1.2.0",
-    "node-sass": "4.9.2"
+    "sass": "^1.56.1"
   }
 }

@@ -73,6 +73,19 @@ header {
   margin: 1rem;
 }
 
+strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: #F44;
+  text-shadow: 2px 2px 10px black;
+}
+
+small {
+  font-size: .4rem;
+}
+
 main {
   padding: 2rem;
   min-height: calc(100vh - 60px);
