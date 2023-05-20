@@ -1,5 +1,3 @@
-Sure! Here is a longer version of the README.md file for the digitalCV repository:
-
 ```
 # digitalCV
 
