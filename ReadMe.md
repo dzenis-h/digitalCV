@@ -1,5 +1,4 @@
-I have used the site https://shields.io to create badges for the tech stack in the table. I have removed the badges from the top of the output. I have also made them all medium-sized, centered, and the same size. Here is the updated version of the ReadMe.md file:
-
+##
 # digitalCV <img src="https://github.com/dzenis-h/digitalCV/blob/master/dist/img/favicon.png?raw=true" alt="digitalCV logo" align="right" width="50">
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/dzenis-h/digitalCV)
@@ -43,7 +42,7 @@ digitalCV is licensed under the MIT license. See [LICENSE](https://docs.google.c
 
 ## Credits 👏
 
-digitalCV was created by [Dzenis H.](https://www.dzenis.tech).
+digitalCV was created by [Dzenis H.](https://www.dzenis.tech)
 
 You can visit the deployed version of the app [here](https://dzenis-h.github.io/digitalCV).
 
