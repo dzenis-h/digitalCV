@@ -34,7 +34,7 @@ Contributions are always welcome! If you would like to contribute to this projec
 
 ## Screenshot 📸
 
-<img src="https://drive.google.com/uc?export=view&id=1vKlzXVx-SbCadLjWUvGwbGHMJ68ekh6m" alt="digitalCV screenshot" height="600">
+<img src="https://drive.google.com/uc?export=view&id=1vKlzXVx-SbCadLjWUvGwbGHMJ68ekh6m" alt="digitalCV screenshot" height="600" width="100%">
 
 ## License 📄
 
